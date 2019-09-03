@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>99TerrainObjects_Event</name>
+    <events>
+        <event-group description="" sid="3995915060343754" title="Crumbling Block">
+            <sub-events>
+                <event-block sid="2906353800010647">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9560630646281738" type="Animated_FallAwayBlock">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="37811212455782" type="Animated_FallAwayBlock">
+                            <param id="0" name="Animation">&quot;Crumble&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1860793840541965">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="7566092423257613" type="Animated_FallAwayBlock">
+                            <param id="0" name="Animation">&quot;Crumble&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="773442917480894" type="Animated_FallAwayBlock" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="7481763850797681" title="Horizontal Moving Platform">
+            <sub-events>
+                <event-block sid="5044259755521787">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2803402928236436" type="floatingPlatform_Horizontal">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="6181824507713054" type="floatingPlatform_Horizontal">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="636125393520487" type="floatingPlatform_Horizontal">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Speed">96</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1397405218306318">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5489817325173216" type="floatingPlatform_Horizontal">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="1739791006515769" type="floatingPlatform_Horizontal">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="196970550071977" type="floatingPlatform_Horizontal">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Speed">96</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4948828660871367">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="975081658255324" type="floatingPlatform_Horizontal">
+                            <param id="0" name="Object">floatingPlatform_Collider</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7152265817828898">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6986663142698014" type="floatingPlatform_Horizontal">
+                                    <param id="0" name="Instance variable">direction</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="3708966518263491" type="floatingPlatform_Horizontal">
+                                    <param id="0" name="Instance variable">direction</param>
+                                    <param id="1" name="Value">&quot;left&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7829706219913529">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7714868122901646" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="8505103928620257" type="floatingPlatform_Horizontal">
+                                    <param id="0" name="Instance variable">direction</param>
+                                    <param id="1" name="Value">&quot;right&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="601587183592355" title="Veritcal Moving Platform">
+            <sub-events>
+                <event-block sid="360172918147902">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="987328182896591" type="FloatingPlatform_Vertical">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;up&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="128618501855014" type="FloatingPlatform_Vertical">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="990875594333882" type="FloatingPlatform_Vertical">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Speed">96</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="478771427906853">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="242864636593097" type="FloatingPlatform_Vertical">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;down&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="694466530503520" type="FloatingPlatform_Vertical">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="854696511037964" type="FloatingPlatform_Vertical">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Speed">96</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="743056570581338">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="479090046157703" type="FloatingPlatform_Vertical">
+                            <param id="0" name="Object">floatingPlatform_Collider</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="737917310516909">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="612917738430661" type="FloatingPlatform_Vertical">
+                                    <param id="0" name="Instance variable">direction</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;up&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="784539891112434" type="FloatingPlatform_Vertical">
+                                    <param id="0" name="Instance variable">direction</param>
+                                    <param id="1" name="Value">&quot;down&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="319777608951590">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="859963074124699" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="530487943681515" type="FloatingPlatform_Vertical">
+                                    <param id="0" name="Instance variable">direction</param>
+                                    <param id="1" name="Value">&quot;up&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="532862987112209" title="Rain">
+            <sub-events>
+                <event-block sid="796647864299815">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="499966295242068" type="System">
+                            <param id="0" name="Variable">stage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="204551334236488">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="869918042413722" type="System">
+                                    <param id="0" name="Interval (seconds)">0.05*dt</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="694804882630697" type="System">
+                                    <param id="0" name="First value">rain.Count</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="164299033731956" type="System">
+                                    <param id="0" name="Object to create">rain</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="X">random(weather.Width)</param>
+                                    <param id="3" name="Y">random(weather.Height)</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="984026963110405" type="rain">
+                                    <param id="0" name="Angle">98</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="655656412921848">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="632323302171656" type="System">
+                            <param id="0" name="Variable">stage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="904546062388878">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="523173816977217" type="System">
+                                    <param id="0" name="Interval (seconds)">0.05*dt</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="909670084943567" type="System">
+                                    <param id="0" name="First value">rain.Count</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="455634255330192" type="System">
+                                    <param id="0" name="Object to create">rain</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">random(weather.Width)</param>
+                                    <param id="3" name="Y">random(weather.Height)</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="673600309303141" type="rain">
+                                    <param id="0" name="Angle">98</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="497534752460239" title="Lightning">
+            <sub-events>
+                <event-block sid="434768350269113">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="749833763801727" type="lightning_trigger">
+                            <param id="0" name="Instance variable">trigger</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;active&quot;</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="737595252476960" type="Player">
+                            <param id="0" name="Object">lightning_trigger</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="243585128516394" type="System">
+                            <param id="0" name="Object to create">lightning</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="811414510611336" type="Audio">
+                            <param id="0" name="Audio file">thunder</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="228542151572472" type="lightning_trigger" />
+                        <action id="-27" name="Set effect enabled" sid="141099341420660" type="ParallaxBG">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;Brightness&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="461312342721079">
+                    <conditions>
+                        <condition behavior="Fade" id="0" name="On fade-out finished" sid="130155279875855" type="lightning" />
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Set effect enabled" sid="649514551790724" type="ParallaxBG">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;Brightness&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="252370069360150" title="Cannon">
+            <sub-events>
+                <event-block sid="101767844469076">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="650510497764816" type="Player">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">cannon.X - 500</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="781495496616341" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">cannon.X + 500</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="833986373758059" type="Player">
+                            <param id="0" name="Object">CannonTrigger</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="881831161942694">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="347992430546432" type="System">
+                                    <param id="0" name="Interval (seconds)">1.75</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="766121704691494" type="cannon">
+                                    <param id="0" name="Object">bullet</param>
+                                    <param id="1" name="Layer">5</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="561756829551661" type="Audio">
+                                    <param id="0" name="Audio file">cannon</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="970750324780302">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="459622246521393" type="bullet" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="365258592689974" type="cannon">
+                            <param id="0" name="Animation">&quot;fire&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="419434887838271">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="840122503366680" type="Player">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">cannon.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="540645063949031" type="bullet">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="322387297901115">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="451441083067042" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="589722908919843" type="bullet">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="935014077249387" title="Breakable Terrain">
+            <sub-events>
+                <event-block sid="474937964421152">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="168352452730531" type="Killbox">
+                            <param id="0" name="Object">Terrain_Breakable</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="112119779910412" type="Terrain_Breakable">
+                            <param id="0" name="&apos;On&apos; time">0.025</param>
+                            <param id="1" name="&apos;Off&apos; time">0.025</param>
+                            <param id="2" name="Duration">0.5</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="927031170508593" type="Terrain_Breakable">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="691688133400959">
+                    <conditions>
+                        <condition behavior="Flash" id="1" name="On flash ended" sid="672073958987685" type="Terrain_Breakable" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="617427777806766" type="Terrain_Breakable" />
+                        <action id="0" name="Play" sid="341993097690166" type="Audio">
+                            <param id="0" name="Audio file">brickbreak</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

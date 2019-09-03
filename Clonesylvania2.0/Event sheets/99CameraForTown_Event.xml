@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>99CameraForTown_Event</name>
+    <events>
+        <event-block sid="4684161838842596">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="3111676229685306" type="Camera">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">Player.X - 100</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="8738883205932925" type="Camera">
+                    <param id="0" name="Instance variable">PlayerCheck</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="5161613652256163" type="Camera">
+                    <param id="0" name="X">lerp(Self.X,Player.X - 90, 0.05)</param>
+                    <param id="1" name="Y">Self.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="866366162189445">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="5117786806808059" type="Camera">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">Player.X + 100</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="7115458863635351" type="Camera">
+                    <param id="0" name="Instance variable">PlayerCheck</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="3320665025256013" type="Camera">
+                    <param id="0" name="X">lerp(Self.X,Player.X + 90, 0.05)</param>
+                    <param id="1" name="Y">Self.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5136019995876665">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="8651880909041289" type="Camera">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">Player.Y - 100</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="7232052382366984" type="Camera">
+                    <param id="0" name="Instance variable">PlayerCheck</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="5485053728223401" type="Camera">
+                    <param id="0" name="X">Self.X</param>
+                    <param id="1" name="Y">lerp(Self.Y,Player.Y - 90, 0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="288506497234993">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="1936105587124423" type="Camera">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">Player.Y + 100</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="5537879867737967" type="Camera">
+                    <param id="0" name="Instance variable">PlayerCheck</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="7014940177742496" type="Camera">
+                    <param id="0" name="X">Self.X</param>
+                    <param id="1" name="Y">lerp(Self.Y,Player.Y + 90, 0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

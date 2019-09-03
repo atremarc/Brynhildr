@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Town_Event</name>
+    <events>
+        <include>99Global_Vars</include>
+        <include>99CameraForTown_Event</include>
+        <include>99PlayerControls_Event</include>
+        <event-block sid="7407738995955728">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1107195270749594" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="7267194757783653" type="Camera">
+                    <param id="0" name="Instance variable">PlayerCheck</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="5456724511311595" type="Player">
+                    <param id="0" name="Instance variable">Control</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4309434022681419">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9737508373613785" type="System">
+                            <param id="0" name="Variable">location</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="839657759968136" type="Player">
+                            <param id="0" name="X">7500</param>
+                            <param id="1" name="Y">800</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="3742438330575893" type="Camera">
+                            <param id="0" name="X">7500</param>
+                            <param id="1" name="Y">800</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7299189805962628">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="6972307689101317" type="Player">
+                    <param id="0" name="Object">warpPoint</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="55910084864991" type="System">
+                    <param id="0" name="Layout">Assal_Layout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="6708285942644651" title="NPC">
+            <sub-events>
+                <event-block sid="1620756870823351">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6779367856868596" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7368217558079016" type="NPC">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5207139758788758">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7094982287190949" type="NPC">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="3857831523205369" type="NPC">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="9923336034677722" type="NPC">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="989940892423342">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="802023572488916" type="NPC">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="7430249699064576" type="NPC">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="5098616616286661" type="NPC">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9786569931794539">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="788099247171664" type="NPC">
+                            <param id="0" name="Object">EnemyEdge</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2762627097285224">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="262211455263972" type="NPC">
+                                    <param id="0" name="Instance variable">Direction</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="6857193673448952" type="NPC">
+                                    <param id="0" name="Instance variable">Direction</param>
+                                    <param id="1" name="Value">&quot;left&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8891938204861483">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8788699854254487" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="6092032827566236" type="NPC">
+                                    <param id="0" name="Instance variable">Direction</param>
+                                    <param id="1" name="Value">&quot;right&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="5668934021758169" title="Dialogue">
+            <sub-events>
+                <event-block sid="5510072953541261">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="822178996310886" type="Player">
+                            <param id="0" name="Object">NPC</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="4140957811442376" type="Text_Dia" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="5712122075089775" type="Text_Dia">
+                            <param id="0" name="Text">&quot;Welcome to our village&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="7881796870006973">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="7930499131178028" type="Player">
+                    <param id="0" name="Object">NPC2</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="5543402346498009" type="Text_Dia" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="966615183102191" type="Text_Dia">
+                    <param id="0" name="Text">&quot;Assal is waiting for you in his chamber&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

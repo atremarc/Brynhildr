@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Stage1_Event</name>
+    <events>
+        <include>99CameraForLevel_Event</include>
+        <include>99PlayerControls_Event</include>
+        <include>99Enemy_Event</include>
+        <include>99TerrainObjects_Event</include>
+        <event-group description="" sid="2781025973420313" title="Start of Stage1">
+            <sub-events>
+                <event-block sid="6393599130054563">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="1271633992890682" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="8752663235717642" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4084364014360657" type="PlayerPin">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="6645215434044596" type="Audio">
+                            <param id="0" name="Audio file">GreenHellZone</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="6624569884678734" type="Text_Title">
+                            <param id="0" name="&apos;On&apos; time">0.2</param>
+                            <param id="1" name="&apos;Off&apos; time">0.2</param>
+                            <param id="2" name="Duration">1.5</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="8620989179386244" type="Camera">
+                            <param id="0" name="Instance variable">PlayerCheck</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="7205928435188064" type="health">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5613456852252355" type="health">
+                            <param id="0" name="Instance variable">hp</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1411235393680932" type="Text_Title">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="2" name="Set visible" sid="1734203805116818" type="reset">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="648009658098717" type="ParallaxBG">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;Brightness&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3160677244657462">
+                    <conditions>
+                        <condition behavior="Flash" id="1" name="On flash ended" sid="5074281181001937" type="Text_Title" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="5119688483721791" type="Text_Title">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="706573437927449" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6025320503253507" type="PlayerPin">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="6420986618341099" type="Player">
+                            <param id="0" name="Instance variable">Control</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5345871242973297">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="532904754185757" type="reset" />
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="5450676467903169" type="System" />
+                        <action id="-9" name="Set value" sid="373990603907153" type="System">
+                            <param id="0" name="Variable">playerHealth</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

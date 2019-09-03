@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>99CameraForLevel_Event</name>
+    <events>
+        <event-block sid="1724880410454312">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="9134685697800237" type="Camera">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">Player.X - 100</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="3988539487125195" type="Camera">
+                    <param id="0" name="Instance variable">PlayerCheck</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="6141809880402011" type="Camera">
+                    <param id="0" name="X">lerp(Self.X,Player.X - 90, 0.05)</param>
+                    <param id="1" name="Y">Self.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9015658142324902">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="4193541757374702" type="Camera">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">Player.X + 100</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="1611218168692164" type="Camera">
+                    <param id="0" name="Instance variable">PlayerCheck</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="2544794970402925" type="Camera">
+                    <param id="0" name="X">lerp(Self.X,Player.X + 90, 0.05)</param>
+                    <param id="1" name="Y">Self.Y</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

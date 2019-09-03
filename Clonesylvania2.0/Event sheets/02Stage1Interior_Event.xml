@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>02Stage1Interior_Event</name>
+    <events>
+        <include>99CameraForTown_Event</include>
+        <include>99TerrainObjects_Event</include>
+        <include>99Enemy_Event</include>
+        <include>99PlayerControls_Event</include>
+        <event-block sid="815978377812367">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="574901655748578" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="121163647571892" type="Player">
+                    <param id="0" name="Instance variable">Control</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="709271947662184">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="276480258347422" type="System">
+                            <param id="0" name="Variable">location</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="112032239668091" type="checkpointA">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Layer">5</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="323675405193473" type="checkpointA">
+                            <param id="0" name="Object">Camera</param>
+                            <param id="1" name="Layer">6</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="753620486478965" type="Camera">
+                            <param id="0" name="Instance variable">PlayerCheck</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="437452239906475">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="824172556346917" type="System">
+                            <param id="0" name="Variable">location</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="223435396405474" type="checkpointB">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Layer">5</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="143615845509914" type="checkpointB">
+                            <param id="0" name="Object">Camera</param>
+                            <param id="1" name="Layer">6</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="941488214754221" type="Camera">
+                            <param id="0" name="Instance variable">PlayerCheck</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="877751865703769">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="975259099063248" type="System">
+                            <param id="0" name="Variable">LifeGot</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;yes&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="608103932653580" type="oneToFourItem" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="886393033491263">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="148036849740984" type="Player">
+                    <param id="0" name="Object">checkpointB</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="827126002779430" type="System">
+                    <param id="0" name="Variable">location</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="481916495532394">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="381958437111575" type="Player">
+                    <param id="0" name="Object">bossRoomA</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="548972430435321" type="Camera">
+                    <param id="0" name="Instance variable">PlayerCheck</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="663880905387441" type="Camera">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="868857679752347" type="Camera">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">256</param>
+                </action>
+                <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="445242450712106" type="movingBrick">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="799221099506249" type="movingBrick">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">256</param>
+                </action>
+                <action id="0" name="Play" sid="172991249255841" type="Audio">
+                    <param id="0" name="Audio file">titlescreen_1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="331050626018203">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="788660260985470" type="Camera">
+                    <param id="0" name="Object">bossRoomC</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="841979949136870" type="Camera">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="678261950744034">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="738964278188026" type="movingBrick">
+                    <param id="0" name="Object">bossRoomB</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="804641015430361" type="movingBrick">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">0</param>
+                </action>
+                <action id="0" name="Play" sid="169894508910737" type="Audio">
+                    <param id="0" name="Audio file">titlescreen_1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

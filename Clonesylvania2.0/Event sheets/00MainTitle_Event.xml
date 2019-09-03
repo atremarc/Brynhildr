@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>00MainTitle_Event</name>
+    <events>
+        <event-block sid="8670948448136631">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7481161947998742" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="9023320707974869" type="titleScreen_bryn">
+                    <param id="0" name="Instance variable">movement</param>
+                    <param id="1" name="Value">&quot;go&quot;</param>
+                </action>
+                <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="780622483236148" type="Camera">
+                    <param id="0" name="Angle">90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3023656627094912">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="5334140360468192" type="titleScreen_bryn">
+                    <param id="0" name="Instance variable">movement</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;go&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="6412547993899926" type="titleScreen_bryn">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="7091830671490413" type="titleScreen_bryn">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3707124745213278">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="845974894436205" type="titleScreen_bryn">
+                    <param id="0" name="Object">titleScreen_collider</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="0" name="Stop" sid="2418950460110413" type="titleScreen_bryn" />
+                <action id="-10" name="Set value" sid="2885468155883483" type="titleScreen_bryn">
+                    <param id="0" name="Instance variable">movement</param>
+                    <param id="1" name="Value">&quot;stop&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="3921170933601753" type="titleScreen_hildr">
+                    <param id="0" name="Instance variable">movement</param>
+                    <param id="1" name="Value">&quot;go&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="8100396017492905" type="Audio">
+                    <param id="0" name="Audio file">titlescreen_1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2829308188306483">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1774444440793981" type="titleScreen_hildr">
+                    <param id="0" name="Instance variable">movement</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;go&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="2532613586314881" type="titleScreen_hildr">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="7213760390992447" type="titleScreen_hildr">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3190863302050783">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4562332095980479" type="titleScreen_hildr">
+                    <param id="0" name="Object">titleScreen_collider</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="0" name="Stop" sid="845091123079402" type="titleScreen_hildr" />
+                <action id="-10" name="Set value" sid="897084110351987" type="titleScreen_hildr">
+                    <param id="0" name="Instance variable">movement</param>
+                    <param id="1" name="Value">&quot;stop&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="4347599740604946" type="Audio">
+                    <param id="0" name="Audio file">titlescreen_1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="2759238097995873" type="titleScreen_pushStart">
+                    <param id="0" name="Instance variable">intro_trigger</param>
+                    <param id="1" name="Value">&quot;go&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6253883025309167">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="5947559690301904" type="titleScreen_pushStart">
+                    <param id="0" name="Instance variable">intro_trigger</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;go&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="5159509022379121" type="titleScreen_pushStart">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="5302334197379824" type="titleScreen_pushStart">
+                    <param id="0" name="&apos;On&apos; time">0.5</param>
+                    <param id="1" name="&apos;Off&apos; time">0.4</param>
+                    <param id="2" name="Duration">180</param>
+                </action>
+                <action id="-10" name="Set value" sid="6540355855760368" type="titleScreen_pushStart">
+                    <param id="0" name="Instance variable">intro_trigger</param>
+                    <param id="1" name="Value">&quot;stop&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="5842905695502747" type="Audio">
+                    <param id="0" name="Audio file">JON VON WONDERFUL - Jon Von Wonderful Presents- Jon Von Wonderland - 04 The Shred Friendz</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9711295170322482">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="6070448340573135" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="361876447355407" type="Camera">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Speed">500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="358209609889655">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1127260758959101" type="Camera">
+                    <param id="0" name="Object">titleScreen_collider</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="0" name="Stop" sid="7534698262141468" type="Camera" />
+                <action id="-15" name="Set visible" sid="5836991242718433" type="titleScreen_icon">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="6890388873783087" type="titleScreen_icon">
+                    <param id="0" name="Instance variable">active</param>
+                    <param id="1" name="Value">&quot;on&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5990738734476156">
+            <conditions>
+                <condition id="3" name="On key released" sid="7403943001602341" type="Keyboard">
+                    <param id="0" name="Key">40</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="2961052053192131" type="titleScreen_icon">
+                    <param id="0" name="Instance variable">active</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;on&quot;</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="3245201255483986" type="titleScreen_icon">
+                    <param id="0" name="Instance variable">selection</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="1486535077365856" type="titleScreen_icon">
+                    <param id="0" name="X">titleScreen_icon.X</param>
+                    <param id="1" name="Y">titleScreen_icon.Y + 64</param>
+                </action>
+                <action id="-10" name="Set value" sid="4139531495774576" type="titleScreen_icon">
+                    <param id="0" name="Instance variable">selection</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7373390553891804">
+            <conditions>
+                <condition id="3" name="On key released" sid="1235483564458816" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="409431414389912" type="titleScreen_icon">
+                    <param id="0" name="Instance variable">active</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;on&quot;</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="1521755941368551" type="titleScreen_icon">
+                    <param id="0" name="Instance variable">selection</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="714831852668427" type="titleScreen_icon">
+                    <param id="0" name="X">titleScreen_icon.X</param>
+                    <param id="1" name="Y">titleScreen_icon.Y - 64</param>
+                </action>
+                <action id="-10" name="Set value" sid="88631420513474" type="titleScreen_icon">
+                    <param id="0" name="Instance variable">selection</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4112805103850283">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5585275187934589" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="7761636236947225" type="titleScreen_icon">
+                    <param id="0" name="Instance variable">active</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;on&quot;</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="9084369925132256" type="titleScreen_icon">
+                    <param id="0" name="Instance variable">selection</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="6972558046903679" type="System">
+                    <param id="0" name="Layout">00TotalLives_Layout</param>
+                </action>
+                <action id="33" name="Stop all" sid="1032244676257861" type="Audio" />
+            </actions>
+        </event-block>
+        <event-block sid="9432549015890624">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="2905952342512047" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="5503182558662809" type="titleScreen_icon">
+                    <param id="0" name="Instance variable">active</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;on&quot;</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="3291863965998406" type="titleScreen_icon">
+                    <param id="0" name="Instance variable">selection</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8892755590014212" type="System">
+                    <param id="0" name="Layout">Stage2_Layout</param>
+                </action>
+                <action id="33" name="Stop all" sid="7245824518639764" type="Audio" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

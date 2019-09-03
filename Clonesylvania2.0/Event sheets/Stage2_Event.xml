@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Stage2_Event</name>
+    <events>
+        <include>99TerrainObjects_Event</include>
+        <include>99PlayerControls_Event</include>
+        <include>99Global_Vars</include>
+        <include>99Enemy_Event</include>
+        <include>99CameraForLevel_Event</include>
+        <event-block sid="208530892784917">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="246689310029695" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="462863829428236" type="Camera">
+                    <param id="0" name="Instance variable">PlayerCheck</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="563352902578174">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="150899576102200" type="Keyboard">
+                    <param id="0" name="Key">81</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="949096247968480" type="System">
+                    <param id="0" name="Variable">playerHealth</param>
+                    <param id="1" name="Value">99</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

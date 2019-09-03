@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout active="1" order="1">00MainTitle_Layout</layout>
+        <layout order="2">02Stage1Interior_Layout</layout>
+        <layout order="3">01Stage1Exterior_Layout</layout>
+        <event-sheet order="4">02Stage1Interior_Event</event-sheet>
+        <event-sheet order="5">99TerrainObjects_Event</event-sheet>
+        <event-sheet order="6">99PlayerControls_Event</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="0">
+        <family expanded="0" name="NPCs" />
+        <family expanded="1" name="Monsters" />
+        <family expanded="0" name="bullets" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="object-folder/sprites/" />
+        <folder expanded="0" path="object-folder/sprites/enemies/" />
+        <folder expanded="0" path="object-folder/sprites/bullets/" />
+        <folder expanded="0" path="object-folder/sprites/player/" />
+        <folder expanded="0" path="object-folder/sprites/npcs/" />
+        <folder expanded="1" path="object-folder/sprites/powerups/" />
+        <folder expanded="0" path="object-folder/terrain/" />
+        <folder expanded="0" path="object-folder/triggers/" />
+        <folder expanded="0" path="object-folder/system objects/" />
+        <folder expanded="0" path="object-folder/hud objects/" />
+        <folder expanded="0" path="object-folder/titleScreen/" />
+        <folder expanded="0" path="object-folder/totalLivesScreen/" />
+        <folder expanded="0" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="0" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/cannon/" />
+        <folder expanded="1" path="animation-folder/enemy_death/" />
+        <folder expanded="1" path="animation-folder/BossTester/" />
+        <folder expanded="1" path="animation-folder/Flyer/" />
+        <folder expanded="1" path="animation-folder/snake/" />
+        <folder expanded="1" path="animation-folder/thrower/" />
+        <folder expanded="1" path="animation-folder/Tunk/" />
+        <folder expanded="1" path="animation-folder/hangedMan/" />
+        <folder expanded="1" path="animation-folder/GreenKnight/" />
+        <folder expanded="1" path="animation-folder/fireTunk/" />
+        <folder expanded="1" path="animation-folder/skull/" />
+        <folder expanded="1" path="animation-folder/bomb/" />
+        <folder expanded="1" path="animation-folder/bullet/" />
+        <folder expanded="1" path="animation-folder/shot/" />
+        <folder expanded="1" path="animation-folder/knife/" />
+        <folder expanded="1" path="animation-folder/fireball/" />
+        <folder expanded="1" path="animation-folder/Player/" />
+        <folder expanded="1" path="animation-folder/PlayerPin/" />
+        <folder expanded="1" path="animation-folder/Assal/" />
+        <folder expanded="1" path="animation-folder/Layla/" />
+        <folder expanded="1" path="animation-folder/NPC/" />
+        <folder expanded="1" path="animation-folder/NPC2/" />
+        <folder expanded="1" path="animation-folder/coin/" />
+        <folder expanded="1" path="animation-folder/doubleJump/" />
+        <folder expanded="1" path="animation-folder/fish/" />
+        <folder expanded="1" path="animation-folder/oneToFourItem/" />
+        <folder expanded="1" path="animation-folder/armor/" />
+        <folder expanded="1" path="animation-folder/Animated_FallAwayBlock/" />
+        <folder expanded="1" path="animation-folder/Animated_Torch/" />
+        <folder expanded="1" path="animation-folder/floatingPlatform_Horizontal/" />
+        <folder expanded="1" path="animation-folder/FloatingPlatform_Vertical/" />
+        <folder expanded="1" path="animation-folder/ladder/" />
+        <folder expanded="1" path="animation-folder/Lava/" />
+        <folder expanded="1" path="animation-folder/lightning/" />
+        <folder expanded="1" path="animation-folder/rain/" />
+        <folder expanded="1" path="animation-folder/Terrain_Clip/" />
+        <folder expanded="1" path="animation-folder/Terrain_NoClip/" />
+        <folder expanded="1" path="animation-folder/Terrain_PassFromBottom/" />
+        <folder expanded="1" path="animation-folder/Terrain_Breakable/" />
+        <folder expanded="1" path="animation-folder/elevatorVert/" />
+        <folder expanded="1" path="animation-folder/elevatorHor/" />
+        <folder expanded="1" path="animation-folder/movingBrick/" />
+        <folder expanded="1" path="animation-folder/Camera/" />
+        <folder expanded="1" path="animation-folder/floatingPlatform_Collider/" />
+        <folder expanded="1" path="animation-folder/Killbox/" />
+        <folder expanded="1" path="animation-folder/lightning_trigger/" />
+        <folder expanded="1" path="animation-folder/player_hitbox/" />
+        <folder expanded="1" path="animation-folder/checkpointA/" />
+        <folder expanded="1" path="animation-folder/checkpointB/" />
+        <folder expanded="1" path="animation-folder/levelToLevel/" />
+        <folder expanded="1" path="animation-folder/bulletTrigger/" />
+        <folder expanded="1" path="animation-folder/bossRoomA/" />
+        <folder expanded="1" path="animation-folder/bossRoomB/" />
+        <folder expanded="1" path="animation-folder/bossRoomC/" />
+        <folder expanded="1" path="animation-folder/health/" />
+        <folder expanded="1" path="animation-folder/textBox/" />
+        <folder expanded="1" path="animation-folder/lifeIcon/" />
+        <folder expanded="1" path="animation-folder/lifeIconBorder/" />
+        <folder expanded="1" path="animation-folder/ScoreIconBorder/" />
+        <folder expanded="1" path="animation-folder/ScoreItemHud/" />
+        <folder expanded="1" path="animation-folder/titleScreen_bryn/" />
+        <folder expanded="1" path="animation-folder/titleScreen_collider/" />
+        <folder expanded="1" path="animation-folder/titleScreen_copyright/" />
+        <folder expanded="1" path="animation-folder/titleScreen_demo/" />
+        <folder expanded="1" path="animation-folder/titleScreen_hammer/" />
+        <folder expanded="1" path="animation-folder/titleScreen_hildr/" />
+        <folder expanded="1" path="animation-folder/titleScreen_icon/" />
+        <folder expanded="1" path="animation-folder/titleScreen_pushStart/" />
+        <folder expanded="1" path="animation-folder/livesScreenIcon/" />
+        <folder expanded="1" path="animation-folder/x/" />
+        <folder expanded="1" path="animation-folder/numbers/" />
+        <folder expanded="1" path="animation-folder/gameOver/" />
+    </folders-expanded>
+</c2uistate>
